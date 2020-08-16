@@ -11,7 +11,7 @@ At the same time, with the interactions between users and offer, it enpower us t
 
 In addtion, the analysis on the current situation would help us to uncover our new potential customers who would be involved in the recommendation system once they registed in the app. The offer insight on the other hand could help to review the current offer designing, provision any potentials on offer adjustment or new offer design.
 
-### 1. Introduction / Background
+### Introduction / Background
 
 This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. 
 
@@ -34,3 +34,73 @@ Your task is to combine transaction, demographic and offer data to determine whi
 - You'll also want to take into account that some demographic groups will make purchases even if they don't receive an offer. 
 > From a business perspective, if a customer is going to make a 10 dollar purchase without an offer anyway, you wouldn't want to send a buy 10 dollars get 2 dollars off offer. You'll want to try to assess what a certain demographic group will buy when not receiving any offers.
 
+### File Description
+a. Datasets
+- portfolio.json: the offer info with channel, duration, difficulty, and types.
+- profile.json: the customers info with age, income, gender etc.
+- transcript.json: the original transaction data including all transactions records for each user.
+
+b. Starbucks_Capstone_notebook.ipynb
+The python script preprocessed/cleanned/transformed the three datasets, provided offer/customer analysis over the current situation, and recommendation mechanics built up through FunkSVD.
+
+C. user-offer Matrix
+
+- user_item_matrix.p: the user item matrix for all transaction completed through offer
+- df_train.p: the user item matrix for transaction completed through offer in the train dataset
+- df_test.p: the user item matrix for transaction completed through offer in the test dataset
+
+### Result
+
+1. Customer Analysis
+
+** (1) What group of population is intended to purchase on Starbuck Rewards App?**
+Based on the overall customer profiles within Starbuck,
+- There are more males enrolled as a member
+- Large proportion of customers are distributed between 40 and 60, and there are 2180 (out of 1700) customers with age over 100.
+- The income is slightly right-skewly distributed, and most of customers with income between 5000 and 7000.
+- Based on the number of days that customer joined the membership, most of members joined 2 - 3 years ago.
+
+On the spent behavior perspective,
+- Most customers spent 5-10 times.
+- Their total spent is about 0-100.
+
+** (2) Which group of population is intended to purchase through offer? **
+If we look at how many offers are used by each customer out of the totoal number of purchaese (we called it as offer purchase percent), we could see:
+- The profile for the customers with offer purchase percent > 60%:
+    - Females are more preferred to use offer while purchasing;
+    - Customers'age are more concentrated between 50 to 70, which is similar to the overall cusomters'profile;
+    - The income is mostly distributed between 70k to 100k;
+    - Most of users joined 2-3 years ago;
+    - The total number of transaction is between 3-9 time.
+    
+    
+- The profile for the customers with offer purchase percent < 30%:
+    - Males are more preferred to use offer;
+    - there are more young customers within this group ;
+    - Lower income group have a higher percentage in this group;
+    - Most of users joined 2-3 years ago;
+    - The total number of transaction is between 4-35 time, which is broader than the group with higher offer purchase percent.
+    
+**(3) Which factors behind customers are more correlated with offer transaction? **
+- Age, income and female gender have positive impact over the offer purchase percent.
+- The length of time member stayed with Starbuck and male gender have negative impact.
+
+2. Offer Analysis
+
+**(1) Which offer are more popular within transactions?**
+From the offer involved in the transactions,
+- Bogo and discount type are the major offer type in the transacions
+- Offers are more diversed in channel, and email and mobile are the top 2 channels with most offers.
+
+**(2) Which offer has higher usage through transacion?**
+As we could see, 
+- 7 offers are evenly distributed among transactions.
+- The offer with discount type have the highest percentage of usage with transaction, followed by bogo.
+- The one with highest percentage usage is the offer with the id (fafdcd668e3743c1bb461111dcafc2a4)
+- The offer available in all channels have the highest percent of usage, followed by the offers in  all three channels email, mobile,and web and offers. The lowest percent fall in the offers with email as the only channel.
+
+**(3) Which attribute behind offer will drive the effectiveness? **
+- Mobile, social, web, discount type, informational type have positive impact over the offer effectiveness.
+- The difficulty, reward, bogo type have negative impact.
+
+3. User-Offer Recommendation 
