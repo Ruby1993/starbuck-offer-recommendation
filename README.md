@@ -41,6 +41,7 @@ a. Datasets
 - transcript.json: the original transaction data including all transactions records for each user.
 
 b. Starbucks_Capstone_notebook.ipynb
+
 The python script preprocessed/cleanned/transformed the three datasets, provided offer/customer analysis over the current situation, and recommendation mechanics built up through FunkSVD.
 
 C. user-offer Matrix
@@ -53,7 +54,8 @@ C. user-offer Matrix
 
 1. Customer Analysis
 
-** (1) What group of population is intended to purchase on Starbuck Rewards App?**
+**(1) What group of population is intended to purchase on Starbuck Rewards App?**
+
 Based on the overall customer profiles within Starbuck,
 - There are more males enrolled as a member
 - Large proportion of customers are distributed between 40 and 60, and there are 2180 (out of 1700) customers with age over 100.
@@ -64,7 +66,8 @@ On the spent behavior perspective,
 - Most customers spent 5-10 times.
 - Their total spent is about 0-100.
 
-** (2) Which group of population is intended to purchase through offer? **
+**(2) Which group of population is intended to purchase through offer? **
+
 If we look at how many offers are used by each customer out of the totoal number of purchaese (we called it as offer purchase percent), we could see:
 - The profile for the customers with offer purchase percent > 60%:
     - Females are more preferred to use offer while purchasing;
@@ -82,25 +85,34 @@ If we look at how many offers are used by each customer out of the totoal number
     - The total number of transaction is between 4-35 time, which is broader than the group with higher offer purchase percent.
     
 **(3) Which factors behind customers are more correlated with offer transaction? **
+
 - Age, income and female gender have positive impact over the offer purchase percent.
 - The length of time member stayed with Starbuck and male gender have negative impact.
 
 2. Offer Analysis
 
 **(1) Which offer are more popular within transactions?**
+
 From the offer involved in the transactions,
 - Bogo and discount type are the major offer type in the transacions
 - Offers are more diversed in channel, and email and mobile are the top 2 channels with most offers.
 
 **(2) Which offer has higher usage through transacion?**
+
 As we could see, 
 - 7 offers are evenly distributed among transactions.
 - The offer with discount type have the highest percentage of usage with transaction, followed by bogo.
 - The one with highest percentage usage is the offer with the id (fafdcd668e3743c1bb461111dcafc2a4)
 - The offer available in all channels have the highest percent of usage, followed by the offers in  all three channels email, mobile,and web and offers. The lowest percent fall in the offers with email as the only channel.
 
-**(3) Which attribute behind offer will drive the effectiveness? **
+**(3) Which attribute behind offer will drive the effectiveness?**
+
 - Mobile, social, web, discount type, informational type have positive impact over the offer effectiveness.
 - The difficulty, reward, bogo type have negative impact.
 
 3. User-Offer Recommendation 
+
+By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 0.020088 with 12 latent features. For the existing user, we could provide the offers which will trigger the spent with higher possibility. For the new users, we will suggest the offer with the highest effective percent overall.
+
+### Further Work
+Based on the customer/offer analysis, it would be good to build the machine learning algorithm to recognize the potential users for the offer mechanics and it will help us to recognize new users if they need to be involved in the user-offer recommendation.
