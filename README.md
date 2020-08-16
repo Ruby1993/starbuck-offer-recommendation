@@ -66,7 +66,7 @@ On the spent behavior perspective,
 - Most customers spent 5-10 times.
 - Their total spent is about 0-100.
 
-**(2) Which group of population is intended to purchase through offer? **
+**(2) Which group of population is intended to purchase through offer?**
 
 If we look at how many offers are used by each customer out of the totoal number of purchaese (we called it as offer purchase percent), we could see:
 - The profile for the customers with offer purchase percent > 60%:
@@ -84,7 +84,7 @@ If we look at how many offers are used by each customer out of the totoal number
     - Most of users joined 2-3 years ago;
     - The total number of transaction is between 4-35 time, which is broader than the group with higher offer purchase percent.
     
-**(3) Which factors behind customers are more correlated with offer transaction? **
+**(3) Which factors behind customers are more correlated with offer transaction?**
 
 - Age, income and female gender have positive impact over the offer purchase percent.
 - The length of time member stayed with Starbuck and male gender have negative impact.
