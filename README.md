@@ -110,7 +110,13 @@ As we could see,
 
 3. User-Offer Recommendation 
 
-By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 2.095*10-6 with 13 latent features. For the existing user, we could provide the offers which will trigger the spent with higher possibility. For the new users, we will suggest the offer with the highest effective percent overall.
+By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 2.095*10-6 with 13 latent features.  
+- For the existing user in the test dataset, we could get the estimated number of transactions based on the dot product between the user matrix and the offer matrix. Then we would be able to recommend the offer with the highest estimated number of transactions.
+- For the new user as the “Cold Start Problem”, we simply provide the offer with the highest effective percent since there is no interaction info within the training dataset. The effectiveness percent is calculated as the number of offers in success/the total number of offers sent.
+
+**Model Evaluation and Validation**
+
+In order to test the model, we utilize a testing dataset to get the mean squared errors for the prediction. Through the iteration on the number of latent features from 1 to 20, we could uncover the latent features with minimum mean squared error(2.095*10–6), which is about 13. The learning rate and iterations here are constantly the same (learning_rate=0.005, iters=250).
 
 ### Improvement
 Based on the customer/offer analysis, it would be good to build the machine learning algorithm to recognize the potential users for the offer mechanics and it will help us to recognize new users if they need to be involved in the user-offer recommendation.
