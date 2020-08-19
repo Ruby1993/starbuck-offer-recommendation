@@ -1,17 +1,6 @@
 # Starbuck Capstone Challenge
 
-### Problem Statement / Overview
-
-This project is focused on the topic over offer recommendations on the Starbucks rewards mobile app. Nowadays, members are more and more willingly to spend through online order and offer could play a big role in user's engagement and transactions. With the data on customers' profile, offers'characteristic, all transaction details, it could help the business understand the current offer mechanism,
-- Who are the cusomters active on Starbuck rewards mobile app? Who spent more frequently through offers?
-- Which offer are more popular with higher usage? Which offer are more effective with impact on customers' spent behavior?
-
-At the same time, with the interactions between users and offer, it enpower us to build up a recommendation system which could help to realize more revenues through the Starbucks rewards mobile app, basically enable us to uncover the user-offer pair with highest posibility of transactions and provided the answer for the question below,
-- Who are the users we need to send the offer and what type of offer we need to send?
-
-In addtion, the analysis on the current situation would help us to uncover our new potential customers who would be involved in the recommendation system once they registed in the app. The offer insight on the other hand could help to review the current offer designing, provision any potentials on offer adjustment or new offer design.
-
-### Introduction / Background
+### Introduction
 
 This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. 
 
@@ -33,6 +22,15 @@ Your task is to combine transaction, demographic and offer data to determine whi
 
 - You'll also want to take into account that some demographic groups will make purchases even if they don't receive an offer. 
 > From a business perspective, if a customer is going to make a 10 dollar purchase without an offer anyway, you wouldn't want to send a buy 10 dollars get 2 dollars off offer. You'll want to try to assess what a certain demographic group will buy when not receiving any offers.
+
+### Problem Statement / Overview
+
+In this project, in order to maximize the data value flowing through the rewards app and the potential revenues through online order, the final goal is to design the recommendation engine that would be able to send the offer to the targeted customers which are most effective.
+Here is a list of questions that will be answered in this project:
+
+- Who are the customers active on Starbuck rewards mobile app? Who spent more frequently through offers?
+- Which offers are more popular with higher usage? Which offers are more effective with an impact on customers’ spent behavior?
+- Recommendation Engine: Who are the targeted customers we need to send the offer and what type of offer we need to send?
 
 ### File Description
 a. Datasets
@@ -112,7 +110,7 @@ As we could see,
 
 3. User-Offer Recommendation 
 
-By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 0.020088 with 12 latent features. For the existing user, we could provide the offers which will trigger the spent with higher possibility. For the new users, we will suggest the offer with the highest effective percent overall.
+By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 2.095*10-6 with 13 latent features. For the existing user, we could provide the offers which will trigger the spent with higher possibility. For the new users, we will suggest the offer with the highest effective percent overall.
 
-### Further Work
+### Improvement
 Based on the customer/offer analysis, it would be good to build the machine learning algorithm to recognize the potential users for the offer mechanics and it will help us to recognize new users if they need to be involved in the user-offer recommendation.
