@@ -32,6 +32,7 @@ Your task is to combine transaction, demographic and offer data to determine whi
   - [Customer Analysis](#customer-analysis)
   - [Offer Analysis](#offer-analysis)
   - [User-Offer Recommendation](#user-offer-recommendation )
+- [Acknowledgement](#acknowledgement)
   
 ## Getting Started
 
@@ -145,4 +146,7 @@ By leveraging the transaction records, we utilize user-offer-matrix that represe
 **Model Evaluation and Validation**
 
 In order to test the model, we utilize a testing dataset to get the mean squared errors for the prediction. Through the iteration on the number of latent features from 1 to 20, we could uncover the latent features with minimum mean squared error(0.00632), which is about 11. The learning rate and iterations here are constantly the same (learning_rate=0.005, iters=250).
+
+## Acknowledgement
+
 
