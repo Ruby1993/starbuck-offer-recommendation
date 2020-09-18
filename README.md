@@ -1,38 +1,5 @@
 # Starbuck Capstone Challenge
 
-## Table of Contents
-
-- [Getting Started](#getting-started)
-- [Introduction](#introduction)
-- [Problem Statement / Overview](#Problem-Statement-/-Overview)
-  - [Drawing](#drawing)
-  - [Input Handling](#input-handling)
-  - [Layering](#layering)
-  - [Text GUI Components](#text-gui-components)
-  - [Animations](#animations)
-  - [Shape and Box Drawing](#shape-and-box-drawing)
-  - [Fonts and Tilesets](#fonts-and-tilesets)
-  - [Road Map](#road-map)
-  - [License](#license)
-  - [Credits](#credits)
-  - [Thanks](#thanks)
-
-## Getting Started
-
-If you want to run this analysis by yourself, there are couple libraries need to be installed which are listed below,
-```python
-library(pandas)
-libaray(numpy)
-library(math)
-library(json)
-library(os)
-library(datetime)
-library(matplotlib)
-library(seaborn)
-library(pickle)
-library(sklearn)
-```
-
 ## Introduction
 
 This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. 
@@ -65,6 +32,32 @@ Here is a list of questions that will be answered in this project:
 - Which offers are more popular with higher usage? Which offers are more effective with an impact on customers’ spent behavior?
 - Recommendation Engine: Who are the targeted customers we need to send the offer and what type of offer we need to send?
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Introduction](#introduction)
+- [File Description](#File-Description)
+- [Result](#Result)
+  - [1. Customer Analysis](#1. Customer Analysis)
+  - [2. Offer Analysis](#2. Offer Analysis)
+  - [3. User-Offer Recommendation](#3. User-Offer Recommendation )
+  
+## Getting Started
+
+If you want to run this analysis by yourself, there are couple libraries need to be installed which are listed below,
+```python
+library(pandas)
+libaray(numpy)
+library(math)
+library(json)
+library(os)
+library(datetime)
+library(matplotlib)
+library(seaborn)
+library(pickle)
+library(sklearn)
+```
+
 ## File Description
 
 a. Datasets
@@ -85,7 +78,7 @@ C. user-offer Matrix
 
 ## Result
 
-1. Customer Analysis
+### 1. Customer Analysis
 
 **(1) What group of population is intended to purchase on Starbuck Rewards App?**
 
@@ -122,7 +115,7 @@ If we look at how many offers are used by each customer out of the totoal number
 - Age, income and female gender have positive impact over the offer purchase percent.
 - The length of time member stayed with Starbuck and male gender have negative impact.
 
-2. Offer Analysis
+### 2. Offer Analysis
 
 **(1) Which offer are more popular within transactions?**
 
@@ -143,7 +136,7 @@ As we could see,
 - Mobile, social, web, discount type, informational type have positive impact over the offer effectiveness.
 - The difficulty, reward, bogo type have negative impact.
 
-3. User-Offer Recommendation 
+### 3. User-Offer Recommendation 
 
 By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 0.00632 with 11 latent features.  
 - For the existing user in the test dataset, we could get the estimated number of transactions based on the dot product between the user matrix and the offer matrix. Then we would be able to recommend the offer with the highest estimated number of transactions.
