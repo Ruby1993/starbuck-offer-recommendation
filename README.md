@@ -23,24 +23,15 @@ Your task is to combine transaction, demographic and offer data to determine whi
 - You'll also want to take into account that some demographic groups will make purchases even if they don't receive an offer. 
 > From a business perspective, if a customer is going to make a 10 dollar purchase without an offer anyway, you wouldn't want to send a buy 10 dollars get 2 dollars off offer. You'll want to try to assess what a certain demographic group will buy when not receiving any offers.
 
-## Problem Statement / Overview
-
-In this project, in order to maximize the data value flowing through the rewards app and the potential revenues through online order, the final goal is to design the recommendation engine that would be able to send the offer to the targeted customers which are most effective.
-Here is a list of questions that will be answered in this project:
-
-- Who are the customers active on Starbuck rewards mobile app? Who spent more frequently through offers?
-- Which offers are more popular with higher usage? Which offers are more effective with an impact on customers’ spent behavior?
-- Recommendation Engine: Who are the targeted customers we need to send the offer and what type of offer we need to send?
-
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Introduction](#introduction)
 - [File Description](#file-description)
+- [Problem Statement/Overview](#problem-statement)
 - [Result](#result)
-  - [Customer Analysis](#1.-customer-analysis)
-  - [Offer Analysis](#2.-offer-analysis)
-  - [User-Offer Recommendation](#3.-User-Offer-Recommendation )
+  - [Customer Analysis](#customer-analysis)
+  - [Offer Analysis](#offer-analysis)
+  - [User-Offer Recommendation](#user-offer-recommendation )
   
 ## Getting Started
 
@@ -76,9 +67,18 @@ C. user-offer Matrix
 - df_train.p: the user item matrix for transaction completed through offer in the train dataset
 - df_test.p: the user item matrix for transaction completed through offer in the test dataset
 
+## Problem Statement
+
+In this project, in order to maximize the data value flowing through the rewards app and the potential revenues through online order, the final goal is to design the recommendation engine that would be able to send the offer to the targeted customers which are most effective.
+Here is a list of questions that will be answered in this project:
+
+- Who are the customers active on Starbuck rewards mobile app? Who spent more frequently through offers?
+- Which offers are more popular with higher usage? Which offers are more effective with an impact on customers’ spent behavior?
+- Recommendation Engine: Who are the targeted customers we need to send the offer and what type of offer we need to send?
+
 ## Result
 
-### 1. Customer Analysis
+### Customer Analysis
 
 **(1) What group of population is intended to purchase on Starbuck Rewards App?**
 
@@ -115,7 +115,7 @@ If we look at how many offers are used by each customer out of the totoal number
 - Age, income and female gender have positive impact over the offer purchase percent.
 - The length of time member stayed with Starbuck and male gender have negative impact.
 
-### 2. Offer Analysis
+### Offer Analysis
 
 **(1) Which offer are more popular within transactions?**
 
@@ -136,7 +136,7 @@ As we could see,
 - Mobile, social, web, discount type, informational type have positive impact over the offer effectiveness.
 - The difficulty, reward, bogo type have negative impact.
 
-### 3. User-Offer Recommendation 
+### User Offer Recommendation 
 
 By leveraging the transaction records, we utilize user-offer-matrix that represents how many number of transactions are done through offers for each users. With the FunkSVD algorithm, the lowest mean square error we achieved is 0.00632 with 11 latent features.  
 - For the existing user in the test dataset, we could get the estimated number of transactions based on the dot product between the user matrix and the offer matrix. Then we would be able to recommend the offer with the highest estimated number of transactions.
