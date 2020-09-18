@@ -38,9 +38,9 @@ Here is a list of questions that will be answered in this project:
 - [Introduction](#introduction)
 - [File Description](#File-Description)
 - [Result](#Result)
-  - [1. Customer Analysis](#1. Customer Analysis)
-  - [2. Offer Analysis](#2. Offer Analysis)
-  - [3. User-Offer Recommendation](#3. User-Offer Recommendation )
+  - [Customer Analysis](#1. Customer Analysis)
+  - [Offer Analysis](#2. Offer Analysis)
+  - [User-Offer Recommendation](#3. User-Offer Recommendation )
   
 ## Getting Started
 
