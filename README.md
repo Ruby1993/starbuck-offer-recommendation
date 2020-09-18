@@ -36,11 +36,11 @@ Here is a list of questions that will be answered in this project:
 
 - [Getting Started](#getting-started)
 - [Introduction](#introduction)
-- [File Description](#File-Description)
-- [Result](#Result)
-  - [Customer Analysis](#1. Customer Analysis)
-  - [Offer Analysis](#2. Offer Analysis)
-  - [User-Offer Recommendation](#3. User-Offer Recommendation )
+- [File Description](#file-description)
+- [Result](#result)
+  - [Customer Analysis](#1.-customer-analysis)
+  - [Offer Analysis](#2.-offer-analysis)
+  - [User-Offer Recommendation](#3.-User-Offer-Recommendation )
   
 ## Getting Started
 
