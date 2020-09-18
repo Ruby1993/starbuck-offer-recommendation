@@ -1,6 +1,39 @@
 # Starbuck Capstone Challenge
 
-### Introduction
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Introduction](#introduction)
+- [Problem Statement / Overview](#Problem-Statement-/-Overview)
+  - [Drawing](#drawing)
+  - [Input Handling](#input-handling)
+  - [Layering](#layering)
+  - [Text GUI Components](#text-gui-components)
+  - [Animations](#animations)
+  - [Shape and Box Drawing](#shape-and-box-drawing)
+  - [Fonts and Tilesets](#fonts-and-tilesets)
+  - [Road Map](#road-map)
+  - [License](#license)
+  - [Credits](#credits)
+  - [Thanks](#thanks)
+
+## Getting Started
+
+If you want to run this analysis by yourself, there are couple libraries need to be installed which are listed below,
+```python
+library(pandas)
+libaray(numpy)
+library(math)
+library(json)
+library(os)
+library(datetime)
+library(matplotlib)
+library(seaborn)
+library(pickle)
+library(sklearn)
+```
+
+## Introduction
 
 This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. 
 
@@ -23,7 +56,7 @@ Your task is to combine transaction, demographic and offer data to determine whi
 - You'll also want to take into account that some demographic groups will make purchases even if they don't receive an offer. 
 > From a business perspective, if a customer is going to make a 10 dollar purchase without an offer anyway, you wouldn't want to send a buy 10 dollars get 2 dollars off offer. You'll want to try to assess what a certain demographic group will buy when not receiving any offers.
 
-### Problem Statement / Overview
+## Problem Statement / Overview
 
 In this project, in order to maximize the data value flowing through the rewards app and the potential revenues through online order, the final goal is to design the recommendation engine that would be able to send the offer to the targeted customers which are most effective.
 Here is a list of questions that will be answered in this project:
@@ -32,7 +65,7 @@ Here is a list of questions that will be answered in this project:
 - Which offers are more popular with higher usage? Which offers are more effective with an impact on customers’ spent behavior?
 - Recommendation Engine: Who are the targeted customers we need to send the offer and what type of offer we need to send?
 
-### File Description
+## File Description
 
 a. Datasets
 
@@ -50,7 +83,7 @@ C. user-offer Matrix
 - df_train.p: the user item matrix for transaction completed through offer in the train dataset
 - df_test.p: the user item matrix for transaction completed through offer in the test dataset
 
-### Result
+## Result
 
 1. Customer Analysis
 
