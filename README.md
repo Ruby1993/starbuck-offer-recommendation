@@ -149,4 +149,10 @@ In order to test the model, we utilize a testing dataset to get the mean squared
 
 ## Acknowledgement
 
+Couple references used during the analysis are listed below,
+
+- [Recommendation Method](https://medium.com/fnplus/matrix-factorisation-d3cd9c4d820a)
+- [Recommendation Evaluation](https://towardsdatascience.com/evaluating-recommender-systems-root-means-squared-error-or-mean-absolute-error-1744abc2beac)
+- [FunkSVD Decomposition](https://medium.com/datadriveninvestor/how-funk-singular-value-decomposition-algorithm-work-in-recommendation-engines-36f2fbf62cac)
+- [A/B Testing](https://aws.amazon.com/blogs/machine-learning/using-a-b-testing-to-measure-the-efficacy-of-recommendations-generated-by-amazon-personalize/)
 
